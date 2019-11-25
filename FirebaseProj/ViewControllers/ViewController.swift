@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         daText.layer.cornerRadius = 5
         daText.borderStyle = .bezel
         daText.textColor = .lightGray
-        daText.text = "Enter E-mail..."
+        daText.placeholder = "Enter E-mail..."
         daText.adjustsFontSizeToFitWidth = true
         daText.layer.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         view.addSubview(daText)
@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         daPW.translatesAutoresizingMaskIntoConstraints = false
         daPW.layer.cornerRadius = 5
         daPW.borderStyle = .bezel
-        daPW.text = "Enter Password..."
+        daPW.placeholder = "Enter Password..."
         daPW.textColor = .lightGray
         daPW.isSecureTextEntry = true
         daPW.layer.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -153,5 +153,20 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITextFieldDelegate {
-    
+    func textFieldDidBeginEditing(_ daEmail: UITextField) {
+        daEmail.textColor = .black
+//        if textField == daEmail{
+//            if daEmail.text == daEmail.placeholder{
+//                daEmail.text = ""
+//                daEmail.textColor = .black
+//            }
+//        }
+//        if textField == daPassword{
+//            if daPassword.text == daPassword.placeholder{
+//                daPassword.text = ""
+//                daPassword.textColor = .black
+//            }
+//        }
+
+    }
 }
