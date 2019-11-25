@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         let daText = UITextField()
         daText.translatesAutoresizingMaskIntoConstraints = false
         daText.layer.cornerRadius = 5
+        daText.borderStyle = .bezel
         daText.textColor = .lightGray
         daText.text = "Enter E-mail..."
         daText.adjustsFontSizeToFitWidth = true
@@ -42,6 +43,7 @@ class ViewController: UIViewController {
         let daPW = UITextField()
         daPW.translatesAutoresizingMaskIntoConstraints = false
         daPW.layer.cornerRadius = 5
+        daPW.borderStyle = .bezel
         daPW.text = "Enter Password..."
         daPW.textColor = .lightGray
         daPW.isSecureTextEntry = true
@@ -53,8 +55,9 @@ class ViewController: UIViewController {
     lazy var daLogin: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 10
         button.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        button.layer.shadowOffset = CGSize.init(width: 10, height: 2)
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         view.addSubview(button)
@@ -64,7 +67,7 @@ class ViewController: UIViewController {
     lazy var daCreateButt: UIButton = {
         let daButt = UIButton()
         daButt.translatesAutoresizingMaskIntoConstraints = false
-        daButt.layer.cornerRadius = 20
+        daButt.layer.cornerRadius = 10
         daButt.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         daButt.setTitle("Create Account", for: .normal)
         daButt.setTitleColor(.white, for: .normal)
