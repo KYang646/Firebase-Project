@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //MARK: Todo: Object properties
+    //MARK: Object properties
     
     lazy var megaLabel: UILabel = {
         let daLabel = UILabel()
@@ -58,6 +58,7 @@ class ViewController: UIViewController {
     
     lazy var daLogin: UIButton = {
         let button = UIButton()
+        button.showsTouchWhenHighlighted = true
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
         button.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
@@ -73,6 +74,7 @@ class ViewController: UIViewController {
     
     lazy var daCreateButt: UIButton = {
         let daButt = UIButton()
+        daButt.showsTouchWhenHighlighted = true
         daButt.translatesAutoresizingMaskIntoConstraints = false
         daButt.layer.cornerRadius = 10
         daButt.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
@@ -86,11 +88,13 @@ class ViewController: UIViewController {
         return daButt
     }()
     
-    /*
+    /* MARK: TO DO LIST
      text field for email
      text field for password
      login button
      create account button
+     
+     functions and stuff
      
      
      */
@@ -106,7 +110,7 @@ class ViewController: UIViewController {
     }
 
     
-    //MARK: Todo: UI setup
+    //MARK: UI setup
     
     private func setTextFieldCons() {
         NSLayoutConstraint.activate([
@@ -138,8 +142,6 @@ class ViewController: UIViewController {
             daCreateButt.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 250),
             daCreateButt.heightAnchor.constraint(equalToConstant: 30),
             daCreateButt.widthAnchor.constraint(equalToConstant: 230)
-            
-            
         ])
     }
     
@@ -150,3 +152,6 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITextFieldDelegate {
+    
+}
