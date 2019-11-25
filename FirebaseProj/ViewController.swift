@@ -17,6 +17,10 @@ class ViewController: UIViewController {
         daLabel.text = "Pursuitstagram"
         daLabel.textAlignment = .center
         daLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        daLabel.layer.masksToBounds = false
+        daLabel.shadowOffset = CGSize(width: 5, height: 5)
+        daLabel.layer.shadowRadius = 4
+        daLabel.layer.shadowOpacity = 0.6
         daLabel.font = UIFont(name: "Futura", size: 50)
         daLabel.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
         //daLabel.font = UIFont.systemFont(ofSize: 50)
@@ -57,7 +61,10 @@ class ViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 10
         button.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-        button.layer.shadowOffset = CGSize.init(width: 10, height: 2)
+        button.layer.masksToBounds = false
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.6
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         view.addSubview(button)
@@ -69,6 +76,10 @@ class ViewController: UIViewController {
         daButt.translatesAutoresizingMaskIntoConstraints = false
         daButt.layer.cornerRadius = 10
         daButt.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        daButt.layer.masksToBounds = false
+        daButt.layer.shadowOffset = CGSize(width: 5, height: 5)
+        daButt.layer.shadowRadius = 4
+        daButt.layer.shadowOpacity = 0.6
         daButt.setTitle("Create Account", for: .normal)
         daButt.setTitleColor(.white, for: .normal)
         view.addSubview(daButt)
