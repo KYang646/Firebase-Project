@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     lazy var megaLabel: UILabel = {
         let daLabel = UILabel()
         daLabel.text = "Pursuitstagram"
+        daLabel.layer.shadowOffset = CGSize(width: 2, height: 2)
         daLabel.textAlignment = .center
         daLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         daLabel.layer.masksToBounds = false
