@@ -102,6 +102,44 @@ class ViewController: UIViewController {
     
     //MARK: Todo: Object functions
     
+    @objc func validateFields() {
+        guard daEmail.hasText, daPassword.hasText else {
+            daLogin.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 0.5)
+            daLogin.isEnabled = false
+            return
+        }
+        daLogin.isEnabled = true
+        daLogin.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 1)
+    }
+    
+    @objc func showSignUp() {
+        let signupVC = SignUpViewController()
+        signupVC.modalPresentationStyle = .formSheet
+        present(signupVC, animated: true, completion: nil)
+    }
+    
+    @objc func tryLogin() {
+        guard let email = daEmail.text, let password = daPassword.text else {
+            showAlert(with: "Error", and: "Please fill out all fields.")
+            return
+        }
+        
+        //MARK: TODO - remove whitespace (if any) from email/password
+        
+        guard email.isValidEmail else {
+            showAlert(with: "Error", and: "Please enter a valid email")
+            return
+        }
+        
+        guard password.isValidPassword else {
+            showAlert(with: "Error", and: "Please enter a valid password. Passwords must have at least 8 characters.")
+            return
+        }
+        
+        FirebaseAuthService.manager.loginUser(email: email.lowercased(), password: password) { (result) in
+            self.handleLoginResponse(with: result)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
