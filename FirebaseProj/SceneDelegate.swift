@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: scene)
-        window?.rootViewController = ProfileViewController()
+        window?.rootViewController = FeedViewController()
         window?.makeKeyAndVisible()
     }
     

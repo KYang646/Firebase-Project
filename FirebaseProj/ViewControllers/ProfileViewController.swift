@@ -93,22 +93,6 @@ class ProfileViewController: UIViewController {
         return numLabel
     }()
     
-    
-    /*
-     Profile label
-     Image
-     displayName
-     Edit
-     
-     email
-     number of images submitted
-     
-     */
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
@@ -116,7 +100,6 @@ class ProfileViewController: UIViewController {
         
     }
     
-
     //MARK: UI constraints
     
     private func setDaProfileCons() {
@@ -152,9 +135,6 @@ class ProfileViewController: UIViewController {
             numOfImages.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             numOfImages.heightAnchor.constraint(equalToConstant: 30),
             numOfImages.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -30)
-        
-        
-        
         
         ])
     }
