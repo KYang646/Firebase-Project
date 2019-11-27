@@ -69,6 +69,7 @@ class ViewController: UIViewController {
         button.layer.shadowOpacity = 0.6
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(tryLogin), for: .touchUpInside)
         view.addSubview(button)
         return button
     }()
@@ -84,16 +85,17 @@ class ViewController: UIViewController {
         daButt.layer.shadowRadius = 4
         daButt.layer.shadowOpacity = 0.6
         daButt.setTitle("Create Account", for: .normal)
+        daButt.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         daButt.setTitleColor(.white, for: .normal)
         view.addSubview(daButt)
         return daButt
     }()
     
     /* MARK: TO DO LIST
-     text field for email
-     text field for password
-     login button
-     create account button
+     text field for email☑️
+     text field for password☑️
+     login button☑️
+     create account button☑️
      
      functions and stuff
      
@@ -106,6 +108,9 @@ class ViewController: UIViewController {
         guard daEmail.hasText, daPassword.hasText else {
             daLogin.backgroundColor = UIColor(red: 255/255, green: 67/255, blue: 0/255, alpha: 0.5)
             daLogin.isEnabled = false
+            return
+        }
+        guard daEmail.text != "", daPassword.text != "" else {
             return
         }
         daLogin.isEnabled = true
@@ -138,6 +143,40 @@ class ViewController: UIViewController {
         
         FirebaseAuthService.manager.loginUser(email: email.lowercased(), password: password) { (result) in
             self.handleLoginResponse(with: result)
+        }
+    }
+    
+    private func showAlert(with title: String, and message: String) {
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
+    }
+    
+    private func handleLoginResponse(with result: Result<(), Error>) {
+        switch result {
+        case .failure(let error):
+            showAlert(with: "Error", and: "Could not log in. Error: \(error)")
+        case .success:
+            
+            guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                let sceneDelegate = windowScene.delegate as? SceneDelegate, let window = sceneDelegate.window
+                else {
+                    //MARK: TODO - handle could not swap root view controller
+                    return
+            }
+            
+            //MARK: TODO - refactor this logic into scene delegate
+            UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromBottom, animations: {
+                if FirebaseAuthService.manager.currentUser?.photoURL != nil {
+                    window.rootViewController = ViewController()
+                } else {
+                    window.rootViewController = {
+                        let profileSetupVC = ProfileViewController()
+                        profileSetupVC.settingFromLogin = true
+                        return profileSetupVC
+                    }()
+                }
+            }, completion: nil)
         }
     }
     

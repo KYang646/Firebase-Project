@@ -18,6 +18,9 @@
 		74076066238C865000F1D529 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74076065238C865000F1D529 /* FeedViewController.swift */; };
 		74076068238C866800F1D529 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74076067238C866800F1D529 /* ImageUploadViewController.swift */; };
 		7407606A238C867700F1D529 /* ImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74076069238C867700F1D529 /* ImageDetailViewController.swift */; };
+		740FAB1B238F0BE700D5C671 /* Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FAB1A238F0BE700D5C671 /* Validate.swift */; };
+		740FAB1D238F0C9F00D5C671 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FAB1C238F0C9F00D5C671 /* FirebaseAuthService.swift */; };
+		740FAB1F238F1F8100D5C671 /* FireStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FAB1E238F1F8100D5C671 /* FireStoreService.swift */; };
 		74CDE89E238EFA0800D4C2F9 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CDE89D238EFA0800D4C2F9 /* Users.swift */; };
 		74CDE8A1238F087000D4C2F9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CDE8A0238F087000D4C2F9 /* SignUpViewController.swift */; };
 		B2F3669C3346ECDF66A58654 /* Pods_FirebaseProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD56B0E97647259F94B701FB /* Pods_FirebaseProjTests.framework */; };
@@ -52,6 +55,9 @@
 		74076065238C865000F1D529 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		74076067238C866800F1D529 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		74076069238C867700F1D529 /* ImageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewController.swift; sourceTree = "<group>"; };
+		740FAB1A238F0BE700D5C671 /* Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validate.swift; sourceTree = "<group>"; };
+		740FAB1C238F0C9F00D5C671 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
+		740FAB1E238F1F8100D5C671 /* FireStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreService.swift; sourceTree = "<group>"; };
 		74CDE89D238EFA0800D4C2F9 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		74CDE8A0238F087000D4C2F9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CD7587794E13B760482DF22C /* Pods-FirebaseProj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseProj.debug.xcconfig"; path = "Target Support Files/Pods-FirebaseProj/Pods-FirebaseProj.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +123,9 @@
 				74076040238C410900F1D529 /* SceneDelegate.swift */,
 				74076064238C863500F1D529 /* ViewControllers */,
 				74076047238C410E00F1D529 /* Assets.xcassets */,
+				740FAB1A238F0BE700D5C671 /* Validate.swift */,
+				740FAB1C238F0C9F00D5C671 /* FirebaseAuthService.swift */,
+				740FAB1E238F1F8100D5C671 /* FireStoreService.swift */,
 				74076049238C410E00F1D529 /* LaunchScreen.storyboard */,
 				74076060238C472A00F1D529 /* GoogleService-Info.plist */,
 				7407604C238C410E00F1D529 /* Info.plist */,
@@ -336,10 +345,13 @@
 				74CDE89E238EFA0800D4C2F9 /* Users.swift in Sources */,
 				74076043238C410900F1D529 /* ViewController.swift in Sources */,
 				7407603F238C410900F1D529 /* AppDelegate.swift in Sources */,
+				740FAB1B238F0BE700D5C671 /* Validate.swift in Sources */,
+				740FAB1D238F0C9F00D5C671 /* FirebaseAuthService.swift in Sources */,
 				7407606A238C867700F1D529 /* ImageDetailViewController.swift in Sources */,
 				74076066238C865000F1D529 /* FeedViewController.swift in Sources */,
 				74076068238C866800F1D529 /* ImageUploadViewController.swift in Sources */,
 				74CDE8A1238F087000D4C2F9 /* SignUpViewController.swift in Sources */,
+				740FAB1F238F1F8100D5C671 /* FireStoreService.swift in Sources */,
 				74076063238C862F00F1D529 /* ProfileViewController.swift in Sources */,
 				74076041238C410900F1D529 /* SceneDelegate.swift in Sources */,
 			);

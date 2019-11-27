@@ -9,6 +9,8 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
+    var settingFromLogin = false
 
     //MARK: Todo: Object properties
     
@@ -105,7 +107,7 @@ class ProfileViewController: UIViewController {
     private func setDaProfileCons() {
         NSLayoutConstraint.activate([
             //profileLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -300),
-            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
             profileLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             profileLabel.heightAnchor.constraint(equalToConstant: 50),
             profileLabel.widthAnchor.constraint(equalToConstant: 300),

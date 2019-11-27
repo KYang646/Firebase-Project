@@ -10,6 +10,9 @@ target 'FirebaseProj' do
 # add pods for desired Firebase products
 
 pod 'Firebase/Analytics'
+pod 'Firebase/Firestore'
+pod ‘Firebase/Auth’
+pod ‘Firebase/Storage’
 
 # https://firebase.google.com/docs/ios/setup#available-pods
 
