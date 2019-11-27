@@ -14,10 +14,11 @@ class ProfileViewController: UIViewController {
     
     lazy var profileLabel: UILabel = {
         let label = UILabel()
-        label.layer.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-        label.text = "Profile name"
+        label.layer.backgroundColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.text = "Profile"
         label.textAlignment = .center
-        label.font = UIFont(name: "Georgia-Bold", size: 30)
+        label.font = UIFont(name: "Futura", size: 50)
         label.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(label)
         return label
@@ -34,6 +35,8 @@ class ProfileViewController: UIViewController {
     lazy var dispName: UILabel = {
         let dispLabel = UILabel()
         dispLabel.layer.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
+        dispLabel.text = "James Hetfield"
+        dispLabel.font = UIFont(name: "Palatino-Bold", size: 25)
         dispLabel.translatesAutoresizingMaskIntoConstraints = false
         dispLabel.textAlignment = .center
         view.addSubview(dispLabel)
@@ -73,6 +76,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1)
         setDaProfileCons()
         
     }
@@ -83,7 +87,7 @@ class ProfileViewController: UIViewController {
     private func setDaProfileCons() {
         NSLayoutConstraint.activate([
             //profileLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -300),
-            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5),
+            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             profileLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             profileLabel.heightAnchor.constraint(equalToConstant: 50),
             profileLabel.widthAnchor.constraint(equalToConstant: 300),
