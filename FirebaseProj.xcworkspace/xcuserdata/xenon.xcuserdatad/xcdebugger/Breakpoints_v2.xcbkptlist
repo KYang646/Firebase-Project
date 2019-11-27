@@ -3,4 +3,70 @@
    uuid = "96A9D983-D80F-416D-9BE3-2486221C6D00"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D10EBDB0-7E3E-4223-87EF-39088713B23C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseProj/ViewControllers/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "handleCreateAccountResponse(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4DB28BED-91B7-4DFA-820E-332C55DF04C1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FirebaseProj/ViewControllers/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
+            landmarkName = "handleCreateAccountResponse(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4DB28BED-91B7-4DFA-820E-332C55DF04C1 - 32d891e38e750ce9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in FirebaseProj.SignUpViewController.(handleCreateAccountResponse in _BBB09448FD2581000E0D2FA4F6075E44)(with: Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; ()"
+                  moduleName = "FirebaseProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xenon/Desktop/unit5/FirebaseProj/FirebaseProj/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "4DB28BED-91B7-4DFA-820E-332C55DF04C1 - 32d891e38e750ce9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;(), Swift.Error&gt;) -&gt; () in closure #1 () -&gt; () in FirebaseProj.SignUpViewController.(handleCreateAccountResponse in _BBB09448FD2581000E0D2FA4F6075E44)(with: Swift.Result&lt;__C.FIRUser, Swift.Error&gt;) -&gt; ()"
+                  moduleName = "FirebaseProj"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xenon/Desktop/unit5/FirebaseProj/FirebaseProj/ViewControllers/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "182">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

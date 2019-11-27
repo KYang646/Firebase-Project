@@ -135,8 +135,16 @@ class SignUpViewController: UIViewController {
         DispatchQueue.main.async { [weak self] in
             switch result {
             case .success(let user):
-                FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] newResult in
-                    self?.handleCreatedUserInFirestore(result: newResult)
+                FirestoreService.manager.createAppUser(user: AppUser(from: user)) { [weak self] (newResult) in
+                    switch newResult {
+                    case .failure(let error):
+                        print(error)
+                    case .success(()):
+                        self?.handleCreatedUserInFirestore(result: newResult)
+                       print(newResult)
+
+                    }
+                  
                 }
             case .failure(let error):
                 self?.showAlert(with: "Error creating user", and: "An error occured while creating new account \(error)")
